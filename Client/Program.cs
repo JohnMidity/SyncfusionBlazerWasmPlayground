@@ -9,9 +9,10 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-string LicenseKey = string.Empty;
 try
 {
+    string LicenseKey = string.Empty;
+
     /// Read SyncFusion Licensekey from "syncfusionlicensekey.json"
     HttpClient? http = new HttpClient()
     {
@@ -22,10 +23,11 @@ try
     using var stream = await response.Content.ReadAsStreamAsync();
     builder.Configuration.AddJsonStream(stream);
     LicenseKey = builder.Configuration.GetValue<string>("SyncFusionLicenseKey");
-}
-finally
-{
     Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(LicenseKey);
+}
+catch (Exception ex)
+{
+    ;
 }
 
 
