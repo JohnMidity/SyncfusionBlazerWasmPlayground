@@ -1,12 +1,26 @@
-@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root {
+    --color-default: #004f83;
+    --color-second: #0067ac;
+    --color-white: #fff;
+    --color-body: #e4e9f7;
+    --color-light: #e0e0e0;
+}
 
-html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 h1:focus {
     outline: none;
 }
+
+/*@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
 
 a, .btn-link {
     color: #0071c1;
@@ -36,7 +50,7 @@ a, .btn-link {
 
 .validation-message {
     color: red;
-}
+}*/
 
 #blazor-error-ui {
     background: lightyellow;
