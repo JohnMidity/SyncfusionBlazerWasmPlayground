@@ -5,7 +5,14 @@
 }
 
 main {
-    flex: 1;
+    position: relative;
+    background-color: var(--color-body);
+    min-height: 100vh;
+    top: 0;
+    left: 78px;
+    width: calc(100% - 78px);
+    transition: all .5s ease;
+    z-index: 2;
 }
 
 @media (min-width: 641px) {
